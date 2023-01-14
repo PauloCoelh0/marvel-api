@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="Marvel_Comics" customModuleProvider="target">
+            <connections>
+                <outlet property="themeChoice" destination="JYv-ZL-vFy" id="EFu-gZ-Fik"/>
+                <outlet property="view" destination="ye9-yS-wKa" id="Euz-Ki-j3w"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ye9-yS-wKa">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TjT-Pa-Hbd">
+                    <rect key="frame" x="22" y="86" width="154" height="47"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="39"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6q6-R5-PFI">
+                    <rect key="frame" x="153" y="171" width="85" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JYv-ZL-vFy">
+                    <rect key="frame" x="97" y="225" width="197" height="32"/>
+                    <segments>
+                        <segment title="System"/>
+                        <segment title="Light"/>
+                        <segment title="Dark"/>
+                    </segments>
+                    <connections>
+                        <action selector="themeChoiceDidChange:" destination="-1" eventType="valueChanged" id="rH5-YC-oET"/>
+                    </connections>
+                </segmentedControl>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="ySu-jM-WFE"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="JYv-ZL-vFy" firstAttribute="top" secondItem="6q6-R5-PFI" secondAttribute="bottom" constant="20" id="7J4-iH-BUx"/>
+                <constraint firstItem="JYv-ZL-vFy" firstAttribute="leading" secondItem="ySu-jM-WFE" secondAttribute="leading" constant="97" id="OLo-qT-D5T"/>
+                <constraint firstItem="ySu-jM-WFE" firstAttribute="trailing" secondItem="JYv-ZL-vFy" secondAttribute="trailing" constant="96" id="WSK-dq-Y9H"/>
+                <constraint firstItem="6q6-R5-PFI" firstAttribute="top" secondItem="TjT-Pa-Hbd" secondAttribute="bottom" constant="38" id="Z7E-MJ-umD"/>
+                <constraint firstItem="ySu-jM-WFE" firstAttribute="trailing" secondItem="6q6-R5-PFI" secondAttribute="trailing" constant="152" id="fsA-aP-s8e"/>
+                <constraint firstItem="TjT-Pa-Hbd" firstAttribute="leading" secondItem="ySu-jM-WFE" secondAttribute="leading" constant="22" id="kJX-pi-Ud9"/>
+                <constraint firstItem="TjT-Pa-Hbd" firstAttribute="top" secondItem="ySu-jM-WFE" secondAttribute="top" constant="39" id="pK2-Ex-yhA"/>
+                <constraint firstItem="ySu-jM-WFE" firstAttribute="trailing" secondItem="TjT-Pa-Hbd" secondAttribute="trailing" constant="214" id="qtQ-zZ-m6i"/>
+                <constraint firstItem="6q6-R5-PFI" firstAttribute="leading" secondItem="ySu-jM-WFE" secondAttribute="leading" constant="153" id="ygE-jX-Hvw"/>
+            </constraints>
+            <point key="canvasLocation" x="-411" y="129"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
