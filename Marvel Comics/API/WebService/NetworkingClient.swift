@@ -22,6 +22,7 @@ struct Response {
     let data: Data
     let statusCode: Int
 }
+//teste
 
 final class NetworkingClient: NSObject {
     func request(url: String, queryParams: [String: Any], method: RequestType) -> Result<Response, ServiceError> {
