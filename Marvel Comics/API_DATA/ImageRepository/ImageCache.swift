@@ -17,4 +17,8 @@ final class ImageCache {
     func load(url: NSURL, item: CharacterRepresentableViewModel) -> UIImage? {
         return cachedImages.object(forKey: url)
     }
+    
+    func loadE(url: NSURL, item: EventRepresentableViewModel) -> UIImage? {
+        return cachedImages.object(forKey: url)
+    }
 }

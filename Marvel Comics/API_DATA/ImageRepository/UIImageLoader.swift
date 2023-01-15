@@ -11,6 +11,7 @@ final class UIImageLoader {
     static let share = UIImageLoader()
     private let imageDataRepository = ImageDataRepository()
     private var items = [UIImageView: CharacterRepresentableViewModel]()
+    private var itemsE = [UIImageView: EventRepresentableViewModel]()
         
     func load(_ url: URL, item: CharacterRepresentableViewModel, for imageView: UIImageView, completion: @escaping (()-> Void)) {
         imageDataRepository.load(url: url as NSURL, item: item) { item, image in
@@ -19,6 +20,18 @@ final class UIImageLoader {
                 self.items[imageView] = item
                 imageView.image = image
                 item.image = image
+                completion()
+            }
+        }
+    }
+    
+    func loadE(_ url: URL, itemE: EventRepresentableViewModel, for imageViewE: UIImageView, completion: @escaping (()-> Void)) {
+        imageDataRepository.loadE(url: url as NSURL, itemE: itemE) { itemE, image in
+            defer { self.itemsE.removeValue(forKey: imageViewE) }
+            DispatchQueue.main.async {
+                self.itemsE[imageViewE] = itemE
+                imageViewE.image = image
+                itemE.image = image
                 completion()
             }
         }

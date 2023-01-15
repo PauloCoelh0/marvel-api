@@ -1,25 +1,58 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ubU-yS-MOR">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="EHf-IW-A2E">
+        <scene sceneID="JLA-iP-yoN">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="ubU-yS-MOR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qJ0-lG-zpx">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marvelcomics2.png" translatesAutoresizingMaskIntoConstraints="NO" id="e7Y-7K-Wsx">
+                                <rect key="frame" x="-35" y="218" width="460" height="626"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="460" id="mNk-yZ-QJJ"/>
+                                    <constraint firstAttribute="height" constant="626" id="oaX-Ne-FxZ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Marvel_Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="e2q-j1-Cd8">
+                                <rect key="frame" x="188" y="139" width="226" height="81"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="226" id="OOI-ea-pvu"/>
+                                    <constraint firstAttribute="height" constant="81" id="XE2-pQ-PQI"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Erf-K5-IDI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Erf-K5-IDI" firstAttribute="bottom" secondItem="e2q-j1-Cd8" secondAttribute="bottom" constant="590" id="0ur-ls-jFc"/>
+                            <constraint firstItem="e2q-j1-Cd8" firstAttribute="leading" secondItem="Erf-K5-IDI" secondAttribute="leading" constant="188" id="1da-Bk-sOL"/>
+                            <constraint firstAttribute="trailing" secondItem="e7Y-7K-Wsx" secondAttribute="trailing" constant="-35" id="F3f-gf-ZCH"/>
+                            <constraint firstAttribute="trailing" secondItem="e2q-j1-Cd8" secondAttribute="trailing" constant="-24" id="SQb-Ag-Gzi"/>
+                            <constraint firstItem="e7Y-7K-Wsx" firstAttribute="leading" secondItem="qJ0-lG-zpx" secondAttribute="leading" constant="-35" id="bfE-wi-eoK"/>
+                            <constraint firstAttribute="bottom" secondItem="e7Y-7K-Wsx" secondAttribute="bottom" id="hyO-Q5-MuH"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mww-mK-HXI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="-578.46153846153845" y="240.99526066350711"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Marvel_Logo.png" width="1200" height="482"/>
+        <image name="marvelcomics2.png" width="851" height="1253"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -14,6 +14,13 @@ class MainCoordinator{
     
     func start(container: NSPersistentContainer) -> UIViewController {
         
+        let eventsViewController = EventsCoordinator(container: container)
+            .start()
+        
+        eventsViewController.tabBarItem = UITabBarItem(title: "Events", image: UIImage(systemName: "book.fill"), tag: 0)
+        
+        
+        
         let charactersViewController = CharactersCoordinator(container: container)
             .start()
         
@@ -30,7 +37,7 @@ class MainCoordinator{
         settingsViewController.tabBarItem = UITabBarItem(title:"Settings", image: UIImage(systemName: "gearshape.fill"), tag:0)
     
         
-        (rootViewController as? TabBarViewController)?.viewControllers = [charactersViewController, favoriteViewController, settingsViewController]
+        (rootViewController as? TabBarViewController)?.viewControllers = [eventsViewController, charactersViewController, favoriteViewController, settingsViewController]
         
             
         UITabBar.appearance().tintColor = UIColor.label

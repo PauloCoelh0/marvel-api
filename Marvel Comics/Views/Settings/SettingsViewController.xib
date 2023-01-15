@@ -20,18 +20,18 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TjT-Pa-Hbd">
-                    <rect key="frame" x="22" y="86" width="154" height="47"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="39"/>
+                    <rect key="frame" x="168" y="55" width="77" height="23"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6q6-R5-PFI">
-                    <rect key="frame" x="153" y="171" width="85" height="34"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Themes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6q6-R5-PFI">
+                    <rect key="frame" x="16" y="140" width="88" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JYv-ZL-vFy">
-                    <rect key="frame" x="97" y="225" width="197" height="32"/>
+                    <rect key="frame" x="16" y="178" width="197" height="32"/>
                     <segments>
                         <segment title="System"/>
                         <segment title="Light"/>
@@ -45,17 +45,17 @@
             <viewLayoutGuide key="safeArea" id="ySu-jM-WFE"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="JYv-ZL-vFy" firstAttribute="top" secondItem="6q6-R5-PFI" secondAttribute="bottom" constant="20" id="7J4-iH-BUx"/>
-                <constraint firstItem="JYv-ZL-vFy" firstAttribute="leading" secondItem="ySu-jM-WFE" secondAttribute="leading" constant="97" id="OLo-qT-D5T"/>
-                <constraint firstItem="ySu-jM-WFE" firstAttribute="trailing" secondItem="JYv-ZL-vFy" secondAttribute="trailing" constant="96" id="WSK-dq-Y9H"/>
-                <constraint firstItem="6q6-R5-PFI" firstAttribute="top" secondItem="TjT-Pa-Hbd" secondAttribute="bottom" constant="38" id="Z7E-MJ-umD"/>
-                <constraint firstItem="ySu-jM-WFE" firstAttribute="trailing" secondItem="6q6-R5-PFI" secondAttribute="trailing" constant="152" id="fsA-aP-s8e"/>
-                <constraint firstItem="TjT-Pa-Hbd" firstAttribute="leading" secondItem="ySu-jM-WFE" secondAttribute="leading" constant="22" id="kJX-pi-Ud9"/>
-                <constraint firstItem="TjT-Pa-Hbd" firstAttribute="top" secondItem="ySu-jM-WFE" secondAttribute="top" constant="39" id="pK2-Ex-yhA"/>
-                <constraint firstItem="ySu-jM-WFE" firstAttribute="trailing" secondItem="TjT-Pa-Hbd" secondAttribute="trailing" constant="214" id="qtQ-zZ-m6i"/>
-                <constraint firstItem="6q6-R5-PFI" firstAttribute="leading" secondItem="ySu-jM-WFE" secondAttribute="leading" constant="153" id="ygE-jX-Hvw"/>
+                <constraint firstItem="6q6-R5-PFI" firstAttribute="top" secondItem="ySu-jM-WFE" secondAttribute="top" constant="93" id="JuO-dq-8V0"/>
+                <constraint firstItem="TjT-Pa-Hbd" firstAttribute="top" secondItem="ySu-jM-WFE" secondAttribute="top" constant="8" id="Nj9-tk-hxo"/>
+                <constraint firstItem="ySu-jM-WFE" firstAttribute="trailing" secondItem="TjT-Pa-Hbd" secondAttribute="trailing" constant="145" id="Trb-a1-B7R"/>
+                <constraint firstItem="TjT-Pa-Hbd" firstAttribute="leading" secondItem="ySu-jM-WFE" secondAttribute="leading" constant="168" id="V1b-9Z-gYB"/>
+                <constraint firstItem="JYv-ZL-vFy" firstAttribute="leading" secondItem="ySu-jM-WFE" secondAttribute="leading" constant="16" id="WfZ-0b-xw2"/>
+                <constraint firstItem="JYv-ZL-vFy" firstAttribute="top" secondItem="6q6-R5-PFI" secondAttribute="bottom" constant="8" symbolic="YES" id="bOe-EB-VpK"/>
+                <constraint firstItem="6q6-R5-PFI" firstAttribute="leading" secondItem="ySu-jM-WFE" secondAttribute="leading" constant="16" id="bZC-ni-8de"/>
+                <constraint firstItem="ySu-jM-WFE" firstAttribute="trailing" secondItem="JYv-ZL-vFy" secondAttribute="trailing" constant="177" id="cKG-Ye-akY"/>
+                <constraint firstItem="ySu-jM-WFE" firstAttribute="trailing" secondItem="6q6-R5-PFI" secondAttribute="trailing" constant="286" id="pcx-xA-la5"/>
             </constraints>
-            <point key="canvasLocation" x="-411" y="129"/>
+            <point key="canvasLocation" x="-412.30769230769232" y="128.67298578199052"/>
         </view>
     </objects>
     <resources>

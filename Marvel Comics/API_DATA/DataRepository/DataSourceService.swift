@@ -13,6 +13,7 @@ enum RemoteDataSourceError: Error {
 
 protocol DataSourceProtocol {
     func getAllCharacters(inputParam: GellAllCharactersInput?) throws -> Characters
+    func getAllEvents(inputParam: GellAllEventsInput?) throws -> Events
 }
 
 final class NetworkingDataSource: DataSourceProtocol {
@@ -42,6 +43,34 @@ final class NetworkingDataSource: DataSourceProtocol {
         switch result {
         case .success(let response):
             return try JSONDecoder().decode(Characters.self, from: response.data)
+        case .failure(let error):
+            switch error {
+            case .unknown, .timeout, .custom:
+                throw RemoteDataSourceError.service
+            }
+        }
+    }
+    
+    
+    
+    func getAllEvents(inputParam: GellAllEventsInput?) throws -> Events {
+        let path = "/v1/public/events"
+        let base = api.baseUrl
+        let parameters: [String: Any] = {
+           let paramsAuth = authenticationManager
+                .generateApiKeyParameters()
+                .dictionary ?? [:]
+            let inputParams = inputParam?.dictionary ?? [:]
+            return paramsAuth.merging(inputParams) { $1 }
+        }()
+        
+        let result = netClient
+            .request(url: base + path,
+                     queryParams: parameters,
+                     method: .get)
+        switch result {
+        case .success(let response):
+            return try JSONDecoder().decode(Events.self, from: response.data)
         case .failure(let error):
             switch error {
             case .unknown, .timeout, .custom:

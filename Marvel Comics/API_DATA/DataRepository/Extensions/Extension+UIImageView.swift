@@ -12,6 +12,10 @@ extension UIImageView {
         UIImageLoader.share.load(url, item: item, for: self, completion: completion)
     }
     
+    func loadImageE(at url: URL, for itemE: EventRepresentableViewModel, completion: @escaping () -> Void) {
+        UIImageLoader.share.loadE(url, itemE: itemE, for: self, completion: completion)
+    }
+    
     func cancelImageLoad() {
         UIImageLoader.share.cancel(for: self)
     }

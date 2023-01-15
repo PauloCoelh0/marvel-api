@@ -65,6 +65,27 @@
 		3A8888262972DE1D001B45BF /* UserInterfaceStyleObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8888252972DE1D001B45BF /* UserInterfaceStyleObserver.swift */; };
 		3A8888282972DE45001B45BF /* WeakStyleObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8888272972DE45001B45BF /* WeakStyleObserver.swift */; };
 		3A88882A2972DE5D001B45BF /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8888292972DE5D001B45BF /* Helper.swift */; };
+		3A88882D297417B3001B45BF /* Marvel_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A88882B297417B2001B45BF /* Marvel_Logo.png */; };
+		3A88882E297417B3001B45BF /* marvelcomics2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A88882C297417B2001B45BF /* marvelcomics2.png */; };
+		3A88883229741D1C001B45BF /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88883129741D1C001B45BF /* EventViewModel.swift */; };
+		3A88883429741D35001B45BF /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88883329741D35001B45BF /* EventListViewController.swift */; };
+		3A88883629741D46001B45BF /* EventListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88883529741D45001B45BF /* EventListCoordinator.swift */; };
+		3A88883829741D56001B45BF /* EventListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88883729741D56001B45BF /* EventListPresenter.swift */; };
+		3A88883A29741D6C001B45BF /* EventListConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88883929741D6C001B45BF /* EventListConfiguration.swift */; };
+		3A88883E29742266001B45BF /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88883D29742266001B45BF /* EventTableViewCell.swift */; };
+		3A8888402974227F001B45BF /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A88883F2974227F001B45BF /* EventTableViewCell.xib */; };
+		3A888842297423F8001B45BF /* GetEventsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A888841297423F8001B45BF /* GetEventsUseCase.swift */; };
+		3A88884429742412001B45BF /* SearchEventUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88884329742412001B45BF /* SearchEventUseCase.swift */; };
+		3A88884A29742777001B45BF /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88884929742777001B45BF /* EventsViewModel.swift */; };
+		3A88884C29742845001B45BF /* GellAllEventsInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88884B29742845001B45BF /* GellAllEventsInput.swift */; };
+		3A88884E29742855001B45BF /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88884D29742855001B45BF /* Events.swift */; };
+		3A8888502974286C001B45BF /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88884F2974286C001B45BF /* EventData.swift */; };
+		3A8888522974287A001B45BF /* EventDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8888512974287A001B45BF /* EventDataContainer.swift */; };
+		3A88885429742888001B45BF /* EventsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88885329742888001B45BF /* EventsResult.swift */; };
+		3A88885729743091001B45BF /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88885629743091001B45BF /* EventDetailViewController.swift */; };
+		3A88885A297430C1001B45BF /* EventDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A888859297430C1001B45BF /* EventDetailPresenter.swift */; };
+		3A88885C297430D5001B45BF /* EventDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88885B297430D5001B45BF /* EventDetailCoordinator.swift */; };
+		3A88885E297430F0001B45BF /* EventDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A88885D297430F0001B45BF /* EventDetailViewController.xib */; };
 		3A9FBFB42972C5CA00930EAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9FBFB32972C5CA00930EAD /* AppDelegate.swift */; };
 		3A9FBFB62972C5CA00930EAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9FBFB52972C5CA00930EAD /* SceneDelegate.swift */; };
 		3A9FBFBB2972C5CA00930EAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A9FBFB92972C5CA00930EAD /* Main.storyboard */; };
@@ -151,6 +172,27 @@
 		3A8888252972DE1D001B45BF /* UserInterfaceStyleObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInterfaceStyleObserver.swift; sourceTree = "<group>"; };
 		3A8888272972DE45001B45BF /* WeakStyleObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakStyleObserver.swift; sourceTree = "<group>"; };
 		3A8888292972DE5D001B45BF /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		3A88882B297417B2001B45BF /* Marvel_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Marvel_Logo.png; path = ../../Marvel_Logo.png; sourceTree = "<group>"; };
+		3A88882C297417B2001B45BF /* marvelcomics2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marvelcomics2.png; path = ../../marvelcomics2.png; sourceTree = "<group>"; };
+		3A88883129741D1C001B45BF /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		3A88883329741D35001B45BF /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
+		3A88883529741D45001B45BF /* EventListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListCoordinator.swift; sourceTree = "<group>"; };
+		3A88883729741D56001B45BF /* EventListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListPresenter.swift; sourceTree = "<group>"; };
+		3A88883929741D6C001B45BF /* EventListConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListConfiguration.swift; sourceTree = "<group>"; };
+		3A88883D29742266001B45BF /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		3A88883F2974227F001B45BF /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
+		3A888841297423F8001B45BF /* GetEventsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEventsUseCase.swift; sourceTree = "<group>"; };
+		3A88884329742412001B45BF /* SearchEventUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventUseCase.swift; sourceTree = "<group>"; };
+		3A88884929742777001B45BF /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
+		3A88884B29742845001B45BF /* GellAllEventsInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GellAllEventsInput.swift; sourceTree = "<group>"; };
+		3A88884D29742855001B45BF /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		3A88884F2974286C001B45BF /* EventData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventData.swift; sourceTree = "<group>"; };
+		3A8888512974287A001B45BF /* EventDataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDataContainer.swift; sourceTree = "<group>"; };
+		3A88885329742888001B45BF /* EventsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsResult.swift; sourceTree = "<group>"; };
+		3A88885629743091001B45BF /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		3A888859297430C1001B45BF /* EventDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailPresenter.swift; sourceTree = "<group>"; };
+		3A88885B297430D5001B45BF /* EventDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailCoordinator.swift; sourceTree = "<group>"; };
+		3A88885D297430F0001B45BF /* EventDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailViewController.xib; sourceTree = "<group>"; };
 		3A9FBFB02972C5CA00930EAD /* Marvel Comics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel Comics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9FBFB32972C5CA00930EAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A9FBFB52972C5CA00930EAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -259,6 +301,7 @@
 				3A8887B32972CDAA001B45BF /* Stories */,
 				3A8887AE2972CD4B001B45BF /* Comics */,
 				3A8887A52972CC9D001B45BF /* Characters */,
+				3A888847297426E0001B45BF /* Events */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -327,6 +370,8 @@
 				3A8887F72972D880001B45BF /* Favourites */,
 				3A8887EE2972D6BB001B45BF /* CharactersDetails */,
 				3A8887D52972D3CF001B45BF /* Characters */,
+				3A88885529743062001B45BF /* EventsDetails */,
+				3A88882F29741C87001B45BF /* Events */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -346,8 +391,8 @@
 		3A8887D82972D484001B45BF /* DataUseCases */ = {
 			isa = PBXGroup;
 			children = (
-				3A8887D92972D49D001B45BF /* GetCharactersUseCase.swift */,
-				3A8887DB2972D4B8001B45BF /* SearchCharacterUseCase.swift */,
+				3A8888462974241E001B45BF /* Events */,
+				3A88884529742417001B45BF /* Characters */,
 			);
 			path = DataUseCases;
 			sourceTree = "<group>";
@@ -391,6 +436,7 @@
 				3A8888032972D94F001B45BF /* Characters */,
 				3A8888022972D946001B45BF /* Search */,
 				3A8888012972D93F001B45BF /* Loading */,
+				3A88883C29742224001B45BF /* Events */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -470,6 +516,77 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		3A88882F29741C87001B45BF /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				3A88883129741D1C001B45BF /* EventViewModel.swift */,
+				3A88883329741D35001B45BF /* EventListViewController.swift */,
+				3A88883529741D45001B45BF /* EventListCoordinator.swift */,
+				3A88883729741D56001B45BF /* EventListPresenter.swift */,
+				3A88883929741D6C001B45BF /* EventListConfiguration.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		3A88883C29742224001B45BF /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				3A88883D29742266001B45BF /* EventTableViewCell.swift */,
+				3A88883F2974227F001B45BF /* EventTableViewCell.xib */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		3A88884529742417001B45BF /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				3A8887DB2972D4B8001B45BF /* SearchCharacterUseCase.swift */,
+				3A8887D92972D49D001B45BF /* GetCharactersUseCase.swift */,
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
+		3A8888462974241E001B45BF /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				3A88884329742412001B45BF /* SearchEventUseCase.swift */,
+				3A888841297423F8001B45BF /* GetEventsUseCase.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		3A888847297426E0001B45BF /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				3A8888482974275F001B45BF /* Request_Input */,
+				3A88884B29742845001B45BF /* GellAllEventsInput.swift */,
+				3A88884D29742855001B45BF /* Events.swift */,
+				3A88884F2974286C001B45BF /* EventData.swift */,
+				3A8888512974287A001B45BF /* EventDataContainer.swift */,
+				3A88885329742888001B45BF /* EventsResult.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		3A8888482974275F001B45BF /* Request_Input */ = {
+			isa = PBXGroup;
+			children = (
+				3A88884929742777001B45BF /* EventsViewModel.swift */,
+			);
+			path = Request_Input;
+			sourceTree = "<group>";
+		};
+		3A88885529743062001B45BF /* EventsDetails */ = {
+			isa = PBXGroup;
+			children = (
+				3A88885629743091001B45BF /* EventDetailViewController.swift */,
+				3A888859297430C1001B45BF /* EventDetailPresenter.swift */,
+				3A88885B297430D5001B45BF /* EventDetailCoordinator.swift */,
+				3A88885D297430F0001B45BF /* EventDetailViewController.xib */,
+			);
+			path = EventsDetails;
+			sourceTree = "<group>";
+		};
 		3A9FBFA72972C5CA00930EAD = {
 			isa = PBXGroup;
 			children = (
@@ -500,6 +617,8 @@
 				3A88878F2972C732001B45BF /* API_DATA */,
 				3A88878E2972C71F001B45BF /* Main */,
 				3A9FBFBF2972C5D400930EAD /* Assets.xcassets */,
+				3A88882B297417B2001B45BF /* Marvel_Logo.png */,
+				3A88882C297417B2001B45BF /* marvelcomics2.png */,
 				3A9FBFC42972C5D400930EAD /* Info.plist */,
 			);
 			path = "Marvel Comics";
@@ -626,12 +745,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A8888402974227F001B45BF /* EventTableViewCell.xib in Resources */,
 				3A9FBFC32972C5D400930EAD /* LaunchScreen.storyboard in Resources */,
+				3A88885E297430F0001B45BF /* EventDetailViewController.xib in Resources */,
 				3A9FBFC02972C5D400930EAD /* Assets.xcassets in Resources */,
 				3A8888072972D998001B45BF /* CharacterTableViewCell.xib in Resources */,
 				3A8888222972DD15001B45BF /* SettingsViewController.xib in Resources */,
 				3A88880B2972DA04001B45BF /* SearchHeaderView.xib in Resources */,
 				3A9FBFBB2972C5CA00930EAD /* Main.storyboard in Resources */,
+				3A88882D297417B3001B45BF /* Marvel_Logo.png in Resources */,
+				3A88882E297417B3001B45BF /* marvelcomics2.png in Resources */,
 				3A8887F62972D7B4001B45BF /* CharacterDetailViewController.xib in Resources */,
 				3A88880F2972DA8D001B45BF /* LoadingTableViewCell.xib in Resources */,
 			);
@@ -663,49 +786,66 @@
 				3A8887D32972D369001B45BF /* extension+Encodable.swift in Sources */,
 				3A8888282972DE45001B45BF /* WeakStyleObserver.swift in Sources */,
 				3A8888262972DE1D001B45BF /* UserInterfaceStyleObserver.swift in Sources */,
+				3A88883229741D1C001B45BF /* EventViewModel.swift in Sources */,
 				3A8887942972C832001B45BF /* DataSourceService.swift in Sources */,
+				3A88883829741D56001B45BF /* EventListPresenter.swift in Sources */,
 				3A88879C2972CB5E001B45BF /* Keys_Root.swift in Sources */,
 				3A8887DA2972D49D001B45BF /* GetCharactersUseCase.swift in Sources */,
+				3A8888502974286C001B45BF /* EventData.swift in Sources */,
 				3A8887EB2972D685001B45BF /* CharacterListPresenter.swift in Sources */,
 				3A8888092972D9EC001B45BF /* SearchHeaderView.swift in Sources */,
+				3A88884E29742855001B45BF /* Events.swift in Sources */,
+				3A88885A297430C1001B45BF /* EventDetailPresenter.swift in Sources */,
 				3A8887E92972D665001B45BF /* CharacterListCoordinator.swift in Sources */,
 				3A9FBFB42972C5CA00930EAD /* AppDelegate.swift in Sources */,
 				3A8887982972C8C5001B45BF /* NetworkingClient.swift in Sources */,
 				3A8887E12972D544001B45BF /* AppCoordinator.swift in Sources */,
 				3A8887B72972CDE8001B45BF /* StoriesItem.swift in Sources */,
+				3A888842297423F8001B45BF /* GetEventsUseCase.swift in Sources */,
 				3A8887B02972CD61001B45BF /* Comics.swift in Sources */,
 				3A8887DC2972D4B8001B45BF /* SearchCharacterUseCase.swift in Sources */,
 				3A8887FF2972D903001B45BF /* FavouriteCoordinator.swift in Sources */,
 				3A8887E72972D62E001B45BF /* CharacterListViewController.swift in Sources */,
+				3A88883A29741D6C001B45BF /* EventListConfiguration.swift in Sources */,
 				3A8887FB2972D8C4001B45BF /* FavouriteCharacterTableViewController.swift in Sources */,
+				3A88885729743091001B45BF /* EventDetailViewController.swift in Sources */,
 				3A8887A32972CC3C001B45BF /* UIImageLoader.swift in Sources */,
 				3A8887BF2972CEB5001B45BF /* GellAllCharactersInput.swift in Sources */,
 				3A88882A2972DE5D001B45BF /* Helper.swift in Sources */,
 				3A88880D2972DA6A001B45BF /* LoadingTableViewCell.swift in Sources */,
 				3A8887B22972CD9D001B45BF /* ComicsItem.swift in Sources */,
+				3A88884429742412001B45BF /* SearchEventUseCase.swift in Sources */,
 				3A8887E52972D5F5001B45BF /* CharacterViewModel.swift in Sources */,
 				3A8887D12972D269001B45BF /* Model.xcdatamodeld in Sources */,
 				3A8887922972C7C1001B45BF /* DataRepository.swift in Sources */,
 				3A8887B52972CDCC001B45BF /* Stories.swift in Sources */,
 				3A8887D72972D3EF001B45BF /* CharactersViewModel.swift in Sources */,
 				3A8888152972DC39001B45BF /* Extension+UIImageView.swift in Sources */,
+				3A88885C297430D5001B45BF /* EventDetailCoordinator.swift in Sources */,
 				3A8887A72972CCCD001B45BF /* Characters.swift in Sources */,
+				3A88883629741D46001B45BF /* EventListCoordinator.swift in Sources */,
 				3A88881E2972DCD9001B45BF /* SettingsPresenter.swift in Sources */,
 				3A8887AD2972CD3A001B45BF /* CharactersResult.swift in Sources */,
 				3A88881C2972DCBD001B45BF /* SettingsViewController.swift in Sources */,
+				3A88885429742888001B45BF /* EventsResult.swift in Sources */,
 				3A8887F22972D754001B45BF /* CharacterDetailPresenter.swift in Sources */,
 				3A8887F02972D735001B45BF /* CharacterDetailViewController.swift in Sources */,
 				3A8888172972DC4E001B45BF /* Extension+String.swift in Sources */,
+				3A88883E29742266001B45BF /* EventTableViewCell.swift in Sources */,
 				3A9FBFB62972C5CA00930EAD /* SceneDelegate.swift in Sources */,
 				3A88879A2972CB02001B45BF /* Hash.swift in Sources */,
 				3A8887AB2972CD0F001B45BF /* CharacterDataContainer.swift in Sources */,
+				3A8888522974287A001B45BF /* EventDataContainer.swift in Sources */,
 				3A8888052972D972001B45BF /* CharacterTableViewCell.swift in Sources */,
+				3A88884A29742777001B45BF /* EventsViewModel.swift in Sources */,
 				3A8887F42972D775001B45BF /* CharacterDetailCoordinator.swift in Sources */,
 				3A8887BC2972CE45001B45BF /* URLElement.swift in Sources */,
 				3A88879F2972CBF0001B45BF /* ImageDataRepository.swift in Sources */,
 				3A8887ED2972D6AA001B45BF /* CharacterListConfiguration.swift in Sources */,
 				3A8887FD2972D8E5001B45BF /* FavouriteCharacterPresenter.swift in Sources */,
+				3A88884C29742845001B45BF /* GellAllEventsInput.swift in Sources */,
 				3A8887F92972D8A4001B45BF /* FavouriteCharacterRepresentableViewModel.swift in Sources */,
+				3A88883429741D35001B45BF /* EventListViewController.swift in Sources */,
 				3A8887BA2972CE1F001B45BF /* Thumbnail.swift in Sources */,
 				3A8888202972DCF3001B45BF /* SettingsCoordinator.swift in Sources */,
 				3A8887C22972CFF7001B45BF /* PersistentFavouriteContainer.swift in Sources */,
