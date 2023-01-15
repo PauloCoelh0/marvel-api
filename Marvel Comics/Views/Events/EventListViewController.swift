@@ -106,7 +106,7 @@ extension EventListViewController: EventListViewProtocol {
         updateDataSource(animatingDifferences: false)
     }
     
-    func appendNewEvents(_ characters: [EventRepresentableViewModel]) {
+    func appendNewEvents(_ events: [EventRepresentableViewModel]) {
         self.events.append(contentsOf: events)
         isFetchingMore = false
         updateDataSource(animatingDifferences: false)

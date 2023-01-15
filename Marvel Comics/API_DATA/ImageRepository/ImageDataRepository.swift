@@ -70,9 +70,9 @@ final class ImageDataRepository {
         runningRequests.removeValue(forKey: item)
     }
     
-    func cancelLoadE(_ item: EventRepresentableViewModel) {
-        runningRequestsE[item]?.cancel()
-        runningRequestsE.removeValue(forKey: item)
+    func cancelLoadE(_ itemE: EventRepresentableViewModel) {
+        runningRequestsE[itemE]?.cancel()
+        runningRequestsE.removeValue(forKey: itemE)
     }
 }
 

@@ -57,13 +57,13 @@ class EventDetailViewController: UIViewController, EventDetailViewProtocol, UITa
     enum SectionTable: Int {
         case comics
         case series
-        case events
+        case characters
         
         func getTitle() -> String {
             switch self {
             case .comics: return "Comics"
             case .series: return "Series"
-            case .events: return "Events"
+            case .characters: return "Characters"
             }
         }
     }

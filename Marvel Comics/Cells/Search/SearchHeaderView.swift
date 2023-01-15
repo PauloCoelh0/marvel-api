@@ -39,7 +39,7 @@ class SearchHeaderView: UITableViewHeaderFooterView {
     }
     
     func configureView() {
-        searchBar.placeholder = "Search character"
+        searchBar.placeholder = "Search"
         searchBar.delegate = self
         
     }
