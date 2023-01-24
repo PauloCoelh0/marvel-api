@@ -122,9 +122,9 @@ extension CharacterDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let sectionTable = SectionTable(rawValue: section) else { return UIView() }
         let sectionButton = UIButton()
-        sectionButton.setTitle(String(sectionTable.getTitle() + " #\(tableViewData[section].count)"),
+        sectionButton.setTitle(String(sectionTable.getTitle() + " [ \(tableViewData[section].count) ]"),
                                for: .normal)
-        sectionButton.backgroundColor = .systemBlue
+        sectionButton.backgroundColor = .systemRed
         sectionButton.tag = section
         sectionButton.addTarget(self,
                                 action: #selector(hideSection(sender:)),

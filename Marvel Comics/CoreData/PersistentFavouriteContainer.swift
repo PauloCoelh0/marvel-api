@@ -42,6 +42,8 @@ final class PersistentFavouriteContainer: NSPersistentContainer {
         }
     }
     
+    // VER ESTA PARTE POSSIVEL PERSIST
+    
     static func fetchFavourites(context: NSManagedObjectContext) -> [FavouriteCharacterRepresentableViewModel] {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: entityName)
         guard let response = try? context.fetch(fetchRequest) else { return [] }

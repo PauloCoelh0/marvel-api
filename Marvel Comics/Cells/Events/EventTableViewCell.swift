@@ -15,18 +15,18 @@ final class EventTableViewCell: UITableViewCell {
             eventImage.contentMode = .scaleToFill
         }
     }
-    @IBOutlet weak var containerDetailEventView: UIView! {
-        didSet {
-            containerDetailEventView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-            containerDetailEventView.clipsToBounds = true
-            containerDetailEventView.layer.cornerRadius = 10
-        }
-    }
+
     @IBOutlet weak var eventTitle: UILabel! {
         didSet {
             eventTitle.numberOfLines = 2
             eventTitle.font = UIFont.boldSystemFont(ofSize: 18)
-            eventTitle.textColor = .white
+            eventTitle.textColor = .label
+        }
+    }
+    @IBOutlet weak var eventDescription: UILabel! {
+        didSet {
+            eventDescription.numberOfLines = 4
+            eventDescription.textColor = .label
         }
     }
     
@@ -54,6 +54,7 @@ final class EventTableViewCell: UITableViewCell {
         self.viewModel = viewModel
         eventImage.image = viewModel.image
         eventTitle.text = viewModel.title
+        eventDescription.text = viewModel.description
         if viewModel.image == nil {
             loadImageE()
         }

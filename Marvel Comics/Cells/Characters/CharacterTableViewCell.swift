@@ -15,18 +15,18 @@ final class CharacterTableViewCell: UITableViewCell {
             characterImage.contentMode = .scaleToFill
         }
     }
-    @IBOutlet weak var containerDetailCharacterView: UIView! {
-        didSet {
-            containerDetailCharacterView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-            containerDetailCharacterView.clipsToBounds = true
-            containerDetailCharacterView.layer.cornerRadius = 10
-        }
-    }
+
     @IBOutlet weak var characterName: UILabel! {
         didSet {
             characterName.numberOfLines = 2
-            characterName.font = UIFont.boldSystemFont(ofSize: 18)
-            characterName.textColor = .white
+            characterName.font = UIFont.boldSystemFont(ofSize: 20)
+            characterName.textColor = .label
+        }
+    }
+    @IBOutlet weak var characterDescription: UILabel! {
+        didSet {
+            characterDescription.numberOfLines = 4
+            characterDescription.textColor = .label
         }
     }
     
@@ -54,6 +54,8 @@ final class CharacterTableViewCell: UITableViewCell {
         self.viewModel = viewModel
         characterImage.image = viewModel.image
         characterName.text = viewModel.name
+        characterDescription.text = viewModel.description
+        
         if viewModel.image == nil {
             loadImage()
         }
