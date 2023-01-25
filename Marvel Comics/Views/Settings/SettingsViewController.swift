@@ -8,6 +8,8 @@
 import UIKit
 import AVFoundation
 import MapKit
+import CoreLocation
+import UserNotifications
 
 enum Theme:String {
     
@@ -21,13 +23,20 @@ protocol SettingsViewProtocol: AnyObject {
 //    func show(_ viewModel: CharacterRepresentableViewModel)
 }
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UNUserNotificationCenterDelegate {
     
     private let presenter: SettingsPresenterProtocol
     
     @IBOutlet weak var mapView: MKMapView!
     
     @IBOutlet weak var buttonClicked: UISwitch!
+    
+    @IBOutlet weak var notificationTester: UIButton!
+    
+    @IBOutlet weak var notificationSwitch: UISwitch!
+    
+    let locationManager = CLLocationManager()
+    var annotation: MKPointAnnotation?
     
     init(presenter: SettingsPresenterProtocol) {
         self.presenter = presenter
@@ -47,13 +56,66 @@ class SettingsViewController: UIViewController {
     @IBAction func buttonClicked(_ sender: UISwitch) {
             mapView.isHidden = !mapView.isHidden
         }
+    
+    @IBAction func notificationTester(_ sender: UIButton) {
+        let switchState = defaults.bool(forKey: "notificationSwitchState")
+        if switchState {
+            let content = UNMutableNotificationContent()
+            content.title = "Marvel Comics"
+            content.body = "Hello Professor, this is a test notification."
+            content.sound = UNNotificationSound.default
+            content.badge = 1
+
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+            let request = UNNotificationRequest(identifier: "test_notification", content: content, trigger: trigger)
+
+            UNUserNotificationCenter.current().add(request) { (error) in
+                if let error = error {
+                    print("Error scheduling notification: \(error.localizedDescription)")
+                }
+                else {
+                    print("Notification scheduled successfully")
+                }
+            }
+        }
+    }
+
+    // Clear badge when user taps on the notification
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["test_notification"])
+        UIApplication.shared.applicationIconBadgeNumber = 0
+        completionHandler()
+    }
+
+    @IBAction func switchValueChanged(_ sender: UISwitch) {
+        defaults.set(sender.isOn, forKey: "notificationSwitchState")
+    }
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        super.viewDidLoad()
         mapView.isHidden = true
-      
-        // Set the correct setting in the UI when starting
+        locationManager.delegate = self
+        mapView.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        addLocations()
+        
+        let switchState = defaults.bool(forKey: "notificationSwitchState")
+        notificationSwitch.isOn = switchState
+        
+        UNUserNotificationCenter.current().delegate = self
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
+            if granted {
+                print("Notification permission granted.")
+            } else {
+                print("Notification permission denied.")
+            }
+        }
+
+        
         let rawValue = defaults.string(forKey: "ThemeStateEnum") ?? "system"
         let currentTheme = Theme(rawValue: rawValue)
         switch currentTheme {
@@ -83,6 +145,40 @@ class SettingsViewController: UIViewController {
             }
         }
     }
+    
+    func addLocations() {
+        let marvelLocation = CLLocationCoordinate2D(latitude: 33.901537, longitude: -118.383948)
+
+        let annotation1 = MKPointAnnotation()
+        annotation1.coordinate = marvelLocation
+        annotation1.title = "Marvel Comics Headquarters"
+        mapView.addAnnotation(annotation1)
+
+        var zoomRect = MKMapRect.null
+        for annotation in mapView.annotations {
+            let annotationPoint = MKMapPoint(annotation.coordinate)
+            let pointRect = MKMapRect(x: annotationPoint.x, y: annotationPoint.y, width: 0.1, height: 0.1)
+            zoomRect = zoomRect.union(pointRect)
+        }
+        mapView.setVisibleMapRect(zoomRect, edgePadding: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10), animated: false)
+    }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last{
+            annotation = MKPointAnnotation()
+            annotation?.coordinate = location.coordinate
+            mapView.addAnnotation(annotation!)
+        }
+    }
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        let center = locationManager.location?.coordinate
+        if let center = center {
+            if mapView.region.span.latitudeDelta > 100 {
+                mapView.setRegion(MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)), animated: false)
+            }
+        }
+    }
+
+    
 
     private func configureAmbientLightSensor() {
         if let ambientLightSensor = device.devices.first(where: { $0.hasTorch && $0.isTorchAvailable }) {
@@ -147,3 +243,4 @@ class SettingsViewController: UIViewController {
         }
     }
 }
+

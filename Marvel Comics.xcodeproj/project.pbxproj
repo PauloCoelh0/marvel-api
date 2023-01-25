@@ -1037,6 +1037,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Marvel Comics/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) Need Camera Acess To Use AmbientLightSensor";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "$(PRODUCT_NAME) Need to acess the your location to use map.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1066,6 +1067,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Marvel Comics/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) Need Camera Acess To Use AmbientLightSensor";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "$(PRODUCT_NAME) Need to acess the your location to use map.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

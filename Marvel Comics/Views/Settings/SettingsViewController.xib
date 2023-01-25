@@ -13,6 +13,8 @@
             <connections>
                 <outlet property="buttonClicked" destination="ING-3I-uAO" id="0QH-0B-4cz"/>
                 <outlet property="mapView" destination="3h8-Jj-i03" id="aaa-js-6dc"/>
+                <outlet property="notificationSwitch" destination="i6c-sO-Iod" id="TnW-wS-Er5"/>
+                <outlet property="notificationTester" destination="69h-My-kYV" id="Un5-f6-uhM"/>
                 <outlet property="themeChoice" destination="JYv-ZL-vFy" id="EFu-gZ-Fik"/>
                 <outlet property="view" destination="ye9-yS-wKa" id="Euz-Ki-j3w"/>
             </connections>
@@ -75,12 +77,23 @@
                         <action selector="themeChoiceDidChange:" destination="-1" eventType="valueChanged" id="rH5-YC-oET"/>
                     </connections>
                 </segmentedControl>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3h8-Jj-i03">
+                    <rect key="frame" x="16" y="433" width="358" height="357"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="358" id="9T8-0C-abs"/>
+                        <constraint firstAttribute="height" constant="357" id="m8v-Bk-f6C"/>
+                    </constraints>
+                    <standardMapConfiguration key="preferredConfiguration"/>
+                </mapView>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="i6c-sO-Iod">
                     <rect key="frame" x="16" y="283" width="51" height="31"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="49" id="eQV-UM-Vrk"/>
                         <constraint firstAttribute="height" constant="31" id="oxF-zV-wJ4"/>
                     </constraints>
+                    <connections>
+                        <action selector="switchValueChanged:" destination="-1" eventType="touchUpInside" id="1MI-7j-JY8"/>
+                    </connections>
                 </switch>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ING-3I-uAO">
                     <rect key="frame" x="16" y="379" width="51" height="31"/>
@@ -92,18 +105,24 @@
                         <action selector="buttonClicked:" destination="-1" eventType="touchUpInside" id="bTq-hy-YvK"/>
                     </connections>
                 </switch>
-                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3h8-Jj-i03">
-                    <rect key="frame" x="16" y="433" width="358" height="357"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69h-My-kYV">
+                    <rect key="frame" x="151" y="243" width="51" height="35"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="358" id="9T8-0C-abs"/>
-                        <constraint firstAttribute="height" constant="357" id="m8v-Bk-f6C"/>
+                        <constraint firstAttribute="width" constant="51" id="1kd-eE-rTv"/>
+                        <constraint firstAttribute="height" constant="35" id="OCM-DD-CkC"/>
                     </constraints>
-                    <standardMapConfiguration key="preferredConfiguration"/>
-                </mapView>
+                    <color key="tintColor" systemColor="labelColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="note.text.badge.plus" catalog="system"/>
+                    <connections>
+                        <action selector="notificationTester:" destination="-1" eventType="touchUpInside" id="aio-i6-ed0"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="ySu-jM-WFE"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="69h-My-kYV" firstAttribute="leading" secondItem="ySu-jM-WFE" secondAttribute="leading" constant="151" id="0OZ-EF-v0g"/>
                 <constraint firstItem="JYv-ZL-vFy" firstAttribute="leading" secondItem="ySu-jM-WFE" secondAttribute="leading" constant="16" id="2Zj-x2-Lks"/>
                 <constraint firstItem="3h8-Jj-i03" firstAttribute="top" secondItem="ING-3I-uAO" secondAttribute="bottom" constant="23" id="2Zp-zZ-TRJ"/>
                 <constraint firstItem="1nx-Pn-b6v" firstAttribute="top" secondItem="i6c-sO-Iod" secondAttribute="bottom" constant="27" id="4Qy-CL-EDd"/>
@@ -114,11 +133,12 @@
                 <constraint firstItem="TjT-Pa-Hbd" firstAttribute="top" secondItem="ySu-jM-WFE" secondAttribute="top" constant="8" id="EcG-61-PG0"/>
                 <constraint firstItem="JYv-ZL-vFy" firstAttribute="top" secondItem="6q6-R5-PFI" secondAttribute="bottom" constant="8" symbolic="YES" id="MKd-gU-jwT"/>
                 <constraint firstItem="ySu-jM-WFE" firstAttribute="trailing" secondItem="i6c-sO-Iod" secondAttribute="trailing" constant="325" id="PVA-pa-7MI"/>
+                <constraint firstItem="ySu-jM-WFE" firstAttribute="trailing" secondItem="69h-My-kYV" secondAttribute="trailing" constant="188" id="Q8B-Gf-B8r"/>
                 <constraint firstItem="e3e-Oc-NpQ" firstAttribute="top" secondItem="JYv-ZL-vFy" secondAttribute="bottom" constant="36" id="QbA-1X-GdT"/>
                 <constraint firstItem="ING-3I-uAO" firstAttribute="leading" secondItem="ySu-jM-WFE" secondAttribute="leading" constant="16" id="U8h-OQ-a5h"/>
                 <constraint firstItem="ING-3I-uAO" firstAttribute="top" secondItem="1nx-Pn-b6v" secondAttribute="bottom" constant="8" symbolic="YES" id="UJI-hS-Wa3"/>
                 <constraint firstItem="i6c-sO-Iod" firstAttribute="leading" secondItem="ySu-jM-WFE" secondAttribute="leading" constant="16" id="Wlt-i3-Ucj"/>
-                <constraint firstItem="ySu-jM-WFE" firstAttribute="trailing" secondItem="e3e-Oc-NpQ" secondAttribute="trailing" constant="237" id="YNh-pP-oQg"/>
+                <constraint firstItem="ySu-jM-WFE" firstAttribute="trailing" secondItem="e3e-Oc-NpQ" secondAttribute="trailing" constant="237" id="Yyh-VY-0Xd"/>
                 <constraint firstItem="ySu-jM-WFE" firstAttribute="trailing" secondItem="TjT-Pa-Hbd" secondAttribute="trailing" constant="145" id="eLK-Yq-O3t"/>
                 <constraint firstItem="ySu-jM-WFE" firstAttribute="trailing" secondItem="6q6-R5-PFI" secondAttribute="trailing" constant="286" id="f8y-DO-Anr"/>
                 <constraint firstItem="ySu-jM-WFE" firstAttribute="trailing" secondItem="1nx-Pn-b6v" secondAttribute="trailing" constant="325" id="fw8-fs-MpS"/>
@@ -129,11 +149,16 @@
                 <constraint firstItem="1nx-Pn-b6v" firstAttribute="leading" secondItem="ySu-jM-WFE" secondAttribute="leading" constant="17" id="sCy-Ga-kU6"/>
                 <constraint firstItem="ySu-jM-WFE" firstAttribute="trailing" secondItem="ING-3I-uAO" secondAttribute="trailing" constant="325" id="xLZ-BF-EhY"/>
                 <constraint firstItem="6q6-R5-PFI" firstAttribute="top" secondItem="ySu-jM-WFE" secondAttribute="top" constant="93" id="xeM-ZH-iaQ"/>
+                <constraint firstItem="69h-My-kYV" firstAttribute="top" secondItem="JYv-ZL-vFy" secondAttribute="bottom" constant="34" id="yBt-Oh-cjj"/>
             </constraints>
             <point key="canvasLocation" x="-412.30769230769232" y="128.67298578199052"/>
         </view>
     </objects>
     <resources>
+        <image name="note.text.badge.plus" catalog="system" width="128" height="108"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

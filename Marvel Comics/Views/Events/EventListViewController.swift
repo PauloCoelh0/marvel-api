@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import UserNotifications
+
 
 protocol EventListViewProtocol: AnyObject {
     func showEvents(_ viewModels: [EventRepresentableViewModel])
@@ -46,6 +48,15 @@ class EventListViewController: UITableViewController {
         configureTableView()
         presenter.viewDidLoad()
         setUpNavigation()
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
+            (granted, error) in
+            if granted {
+                print("Notification permission granted.")
+            } else {
+                print("Notification permission denied.")
+            }
+        }
+
     }
     
     func setUpNavigation() {
@@ -116,6 +127,40 @@ extension EventListViewController: EventListViewProtocol {
         isFetchingMore = !enable
         isFooterViewEnable = enable
     }
+    
+    
+    
+    //Notifications implemented but it will not work, explanation in my native language bellow:
+    
+    // Esta notfication feature não vai funcionar porque esta API não fornece dados suficientes para que a notificação sequer faça sentido. E apesar de o elemento se chamar "Events" eles não se referem por exemplo a "eventos festivos" que ocorrem numa determinada data e localização, mas sim a eventos que ocorrem no mundo da ficção comic.
+    
+//    private func scheduleNotification(event: EventRepresentableViewModel) {
+//        let content = UNMutableNotificationContent()
+//        content.title = "New event starting"
+//        content.body = "\(event.title) is starting today"
+//        content.sound = UNNotificationSound.default
+//        content.badge = 1
+//
+//        let date = event.startDate
+//        let components = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: date)
+//        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+//        let request = UNNotificationRequest(identifier: event.eventID, content: content, trigger: trigger)
+//
+//        UNUserNotificationCenter.current().add(request) { (error) in
+//            if let error = error {
+//                print("Error scheduling notification: \(error)")
+//            }
+//        }
+//    }
+//
+//    func showEvents(_ viewModels: [EventRepresentableViewModel]) {
+//        self.events = viewModels
+//        self.filterEvents = viewModels
+//        self.scheduleNotification(event: viewModels[0])
+//        updateTableView(with: viewModels)
+//    }
+//
+    
 }
 private extension EventListViewController {
     func makeDataSource() -> DataSource {
