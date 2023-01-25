@@ -48,11 +48,27 @@ struct Helper {
             
             
             UserInterfaceStyleManager.shared.updateUserInterfaceStyle(true)
+        case .daySensor:
+            let device = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .unspecified)
+            if let ambientLightSensor = device.devices.first(where: { $0.hasTorch && $0.isTorchAvailable }) {
+                do {
+                    try ambientLightSensor.lockForConfiguration()
+                    let exposureTargetBias = ambientLightSensor.exposureTargetBias
+                    ambientLightSensor.unlockForConfiguration()
+                    if exposureTargetBias > -2.0 {
+                        UserInterfaceStyleManager.shared.updateUserInterfaceStyle(false)
+                    } else {
+                        UserInterfaceStyleManager.shared.updateUserInterfaceStyle(true)
+                    }
+                } catch {
+                    // handle error
+                }
+            } else {
+                // handle error - ambient light sensor not available
+            }
         }
         
         defaults.set(themeChoice.rawValue, forKey: "ThemeStateEnum")
         
      }
-    
 }
-

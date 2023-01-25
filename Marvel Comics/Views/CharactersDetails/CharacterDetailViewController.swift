@@ -30,6 +30,7 @@ class CharacterDetailViewController: UIViewController, CharacterDetailViewProtoc
     }
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var heartForegroundImage: UIImageView! {
         didSet {
             heartForegroundImage.tintColor = .white
@@ -172,4 +173,39 @@ private extension CharacterDetailViewController {
         viewModel?.isFavourite =  heartButton.isSelected
         presenter.saveFavourite(isFavourite: heartButton.isSelected)
     }
+    
+    @IBAction func shareButtonTapped(_ sender: Any) {
+        guard let image = characterImage.image else { return }
+        guard let title = nameLabel.text else {return}
+        guard let description = descriptionLabel.text else {return}
+        let shareView = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 500))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 400, height: 300))
+        imageView.image = image
+        imageView.contentMode = .scaleAspectFill
+        shareView.addSubview(imageView)
+
+        let titleLabel = UILabel(frame: CGRect(x: 0, y: 300, width: 400, height: 50))
+        titleLabel.text = title
+        titleLabel.backgroundColor = .black
+        titleLabel.textAlignment = .center
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 25)
+        shareView.addSubview(titleLabel)
+
+        let descriptionLabel = UILabel(frame: CGRect(x: 0, y: 350, width: 400, height: 150))
+        descriptionLabel.text = description
+        descriptionLabel.backgroundColor = .black
+        descriptionLabel.textAlignment = .left
+        descriptionLabel.numberOfLines = 10
+//        descriptionLabel.lineBreakMode = .byWordWrapping // It's not working.
+        descriptionLabel.font = UIFont.systemFont(ofSize: 15)
+        shareView.addSubview(descriptionLabel)
+
+        let renderer = UIGraphicsImageRenderer(size: shareView.bounds.size)
+        let imageToShare = renderer.image { ctx in
+            shareView.layer.render(in: ctx.cgContext)
+        }
+        let activityViewController = UIActivityViewController(activityItems: [imageToShare], applicationActivities: nil)
+        present(activityViewController, animated: true, completion: nil)
+    }
+
 }

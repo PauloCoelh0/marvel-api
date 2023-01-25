@@ -12,8 +12,9 @@
             <connections>
                 <outlet property="descriptionLabel" destination="KhG-SM-MWd" id="STf-Bn-hib"/>
                 <outlet property="eventImage" destination="qHW-Hy-G7C" id="FeY-wr-ZfH"/>
-                <outlet property="heartButton" destination="2Fd-Td-xsZ" id="wWa-uw-SZQ"/>
+                <outlet property="heartButton" destination="i0t-H4-JVQ" id="g5N-QY-aaF"/>
                 <outlet property="heartForegroundImage" destination="kp6-FB-EOm" id="zTA-5U-oTB"/>
+                <outlet property="shareButton" destination="EJL-3w-Q7W" id="hZj-Wh-aXS"/>
                 <outlet property="tableView" destination="FIs-eX-qgR" id="bYS-1E-Ujv"/>
                 <outlet property="titleLabel" destination="47A-lB-UU8" id="Yse-47-sxO"/>
                 <outlet property="view" destination="t6w-cw-l6U" id="Zom-lX-StY"/>
@@ -102,34 +103,55 @@
                                         <constraint firstAttribute="width" secondItem="kp6-FB-EOm" secondAttribute="height" multiplier="240:131" id="fpD-6H-E5w"/>
                                     </constraints>
                                 </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Fd-Td-xsZ">
-                                    <rect key="frame" x="337" y="426" width="69" height="58"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0t-H4-JVQ">
+                                    <rect key="frame" x="8" y="427" width="52" height="34"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="69" id="FoC-RI-yaP"/>
-                                        <constraint firstAttribute="height" constant="58" id="dQZ-9p-M2K"/>
+                                        <constraint firstAttribute="height" constant="34" id="axH-WJ-Ke9"/>
+                                        <constraint firstAttribute="width" constant="52" id="c6s-l7-NNB"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                    <color key="tintColor" systemColor="systemRedColor"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
                                     <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     <state key="normal" title="Button" image="heart" catalog="system">
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
                                     </state>
                                     <connections>
-                                        <action selector="didTapHeart:" destination="-1" eventType="touchUpInside" id="8QW-h3-BEM"/>
+                                        <action selector="didTapHeart:" destination="-1" eventType="touchUpInside" id="v5d-my-35l"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJL-3w-Q7W">
+                                    <rect key="frame" x="60" y="426" width="52" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="34" id="47s-U2-iRk"/>
+                                        <constraint firstAttribute="width" constant="52" id="S3U-FH-VeY"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="Button" image="paperplane" catalog="system">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="shareButtonTapped:" destination="-1" eventType="touchUpInside" id="6d0-ve-XwF"/>
                                     </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
+                                <constraint firstAttribute="trailing" secondItem="EJL-3w-Q7W" secondAttribute="trailing" constant="302" id="8Rb-oA-7RH"/>
                                 <constraint firstItem="kp6-FB-EOm" firstAttribute="centerX" secondItem="qHW-Hy-G7C" secondAttribute="centerX" id="GCn-UM-xXo"/>
+                                <constraint firstItem="EJL-3w-Q7W" firstAttribute="top" secondItem="qHW-Hy-G7C" secondAttribute="bottom" constant="8" symbolic="YES" id="HdH-wt-JqG"/>
                                 <constraint firstItem="kp6-FB-EOm" firstAttribute="centerY" secondItem="qHW-Hy-G7C" secondAttribute="centerY" id="L1R-q8-6do"/>
+                                <constraint firstItem="EJL-3w-Q7W" firstAttribute="leading" secondItem="i0t-H4-JVQ" secondAttribute="trailing" id="OkI-VV-qmT"/>
+                                <constraint firstItem="i0t-H4-JVQ" firstAttribute="top" secondItem="qHW-Hy-G7C" secondAttribute="bottom" constant="9" id="QId-NB-OSy"/>
                                 <constraint firstAttribute="trailing" secondItem="qHW-Hy-G7C" secondAttribute="trailing" id="RZg-aq-8u6"/>
+                                <constraint firstItem="rbv-Xg-aO9" firstAttribute="top" secondItem="EJL-3w-Q7W" secondAttribute="bottom" constant="26" id="T2g-4T-OIt"/>
                                 <constraint firstItem="rbv-Xg-aO9" firstAttribute="leading" secondItem="AB0-gC-fgo" secondAttribute="leading" id="Vej-nZ-Gxp"/>
-                                <constraint firstItem="2Fd-Td-xsZ" firstAttribute="top" secondItem="qHW-Hy-G7C" secondAttribute="bottom" constant="8" symbolic="YES" id="aiA-tx-LxR"/>
-                                <constraint firstItem="rbv-Xg-aO9" firstAttribute="top" secondItem="2Fd-Td-xsZ" secondAttribute="bottom" constant="2" id="b2S-LT-whR"/>
                                 <constraint firstItem="qHW-Hy-G7C" firstAttribute="leading" secondItem="AB0-gC-fgo" secondAttribute="leading" id="dmn-fl-CE9"/>
                                 <constraint firstItem="qHW-Hy-G7C" firstAttribute="top" secondItem="AB0-gC-fgo" secondAttribute="top" id="fks-1W-4w3"/>
-                                <constraint firstAttribute="trailing" secondItem="2Fd-Td-xsZ" secondAttribute="trailing" constant="8" id="qKE-HE-ayV"/>
+                                <constraint firstItem="EJL-3w-Q7W" firstAttribute="leading" secondItem="i0t-H4-JVQ" secondAttribute="trailing" id="g3v-yC-6Ve"/>
+                                <constraint firstItem="rbv-Xg-aO9" firstAttribute="top" secondItem="i0t-H4-JVQ" secondAttribute="bottom" constant="25" id="i2M-Gk-Bg9"/>
+                                <constraint firstItem="i0t-H4-JVQ" firstAttribute="leading" secondItem="AB0-gC-fgo" secondAttribute="leading" constant="8" id="iyg-Ns-fz1"/>
                                 <constraint firstAttribute="trailing" secondItem="rbv-Xg-aO9" secondAttribute="trailing" id="rhD-Aq-kjn"/>
                                 <constraint firstAttribute="bottom" secondItem="rbv-Xg-aO9" secondAttribute="bottom" id="zrV-kE-iBl"/>
                             </constraints>
@@ -159,11 +181,12 @@
     <resources>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
+        <image name="paperplane" catalog="system" width="128" height="119"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

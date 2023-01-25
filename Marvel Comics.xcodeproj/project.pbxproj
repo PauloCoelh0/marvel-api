@@ -657,6 +657,8 @@
 			dependencies = (
 			);
 			name = "Marvel Comics";
+			packageProductDependencies = (
+			);
 			productName = "Marvel Comics";
 			productReference = 3A9FBFB02972C5CA00930EAD /* Marvel Comics.app */;
 			productType = "com.apple.product-type.application";
@@ -729,6 +731,8 @@
 				Base,
 			);
 			mainGroup = 3A9FBFA72972C5CA00930EAD;
+			packageReferences = (
+			);
 			productRefGroup = 3A9FBFB12972C5CA00930EAD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1032,6 +1036,7 @@
 				DEVELOPMENT_TEAM = S4KJGN3F26;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Marvel Comics/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) Need Camera Acess To Use AmbientLightSensor";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1060,6 +1065,7 @@
 				DEVELOPMENT_TEAM = S4KJGN3F26;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Marvel Comics/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) Need Camera Acess To Use AmbientLightSensor";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

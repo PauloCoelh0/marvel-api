@@ -12,9 +12,10 @@
             <connections>
                 <outlet property="characterImage" destination="3yr-8T-2re" id="Jf5-MX-DWx"/>
                 <outlet property="descriptionLabel" destination="Mmm-sj-iJC" id="3hc-h9-4hT"/>
-                <outlet property="heartButton" destination="IaG-xV-dAI" id="zXO-OK-Yyp"/>
+                <outlet property="heartButton" destination="wLC-eE-DQ5" id="zGT-H2-IXy"/>
                 <outlet property="heartForegroundImage" destination="ns0-hK-QLw" id="Mos-6a-hsT"/>
                 <outlet property="nameLabel" destination="SPA-ul-TJc" id="hGv-sS-BcG"/>
+                <outlet property="shareButton" destination="E9q-i5-Lrc" id="cW5-M7-848"/>
                 <outlet property="tableView" destination="gdC-An-iBH" id="K2E-4w-qro"/>
                 <outlet property="view" destination="SzV-Ld-kuw" id="7zA-cU-74M"/>
             </connections>
@@ -102,36 +103,55 @@
                                         <constraint firstAttribute="width" secondItem="ns0-hK-QLw" secondAttribute="height" multiplier="240:131" id="abq-rt-HfB"/>
                                     </constraints>
                                 </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IaG-xV-dAI">
-                                    <rect key="frame" x="337" y="426" width="69" height="58"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLC-eE-DQ5">
+                                    <rect key="frame" x="0.0" y="426" width="52" height="34"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="58" id="0ck-pV-YaK"/>
-                                        <constraint firstAttribute="width" constant="69" id="g6I-eq-nYn"/>
+                                        <constraint firstAttribute="height" constant="34" id="GbS-8Q-EnF"/>
+                                        <constraint firstAttribute="width" constant="52" id="mdg-aw-VRz"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                    <color key="tintColor" systemColor="systemRedColor"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
                                     <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     <state key="normal" title="Button" image="heart" catalog="system">
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
                                     </state>
                                     <connections>
-                                        <action selector="didTapHeart:" destination="-1" eventType="touchUpInside" id="Hv5-Ko-HW2"/>
+                                        <action selector="didTapHeart:" destination="-1" eventType="touchUpInside" id="hup-V3-YeX"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9q-i5-Lrc">
+                                    <rect key="frame" x="52" y="425" width="52" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="34" id="YIZ-7P-4ez"/>
+                                        <constraint firstAttribute="width" constant="52" id="u2J-p7-1Mn"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="Button" image="paperplane" catalog="system">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="shareButtonTapped:" destination="-1" eventType="touchUpInside" id="DRc-HS-in9"/>
                                     </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstItem="uhP-HN-CVJ" firstAttribute="top" secondItem="IaG-xV-dAI" secondAttribute="bottom" constant="2" id="0nb-Cf-ueL"/>
+                                <constraint firstItem="E9q-i5-Lrc" firstAttribute="leading" secondItem="wLC-eE-DQ5" secondAttribute="trailing" id="0UI-id-4AW"/>
+                                <constraint firstItem="uhP-HN-CVJ" firstAttribute="top" secondItem="wLC-eE-DQ5" secondAttribute="bottom" constant="26" id="3ZB-7E-zoZ"/>
+                                <constraint firstItem="E9q-i5-Lrc" firstAttribute="top" secondItem="3yr-8T-2re" secondAttribute="bottom" constant="7" id="F28-ZI-52D"/>
                                 <constraint firstItem="3yr-8T-2re" firstAttribute="top" secondItem="83m-gQ-5Ye" secondAttribute="top" id="IcA-9i-7yn"/>
+                                <constraint firstItem="wLC-eE-DQ5" firstAttribute="leading" secondItem="83m-gQ-5Ye" secondAttribute="leading" id="IuN-xU-BOK"/>
                                 <constraint firstAttribute="trailing" secondItem="uhP-HN-CVJ" secondAttribute="trailing" id="Kwj-z7-0yL"/>
+                                <constraint firstItem="wLC-eE-DQ5" firstAttribute="top" secondItem="3yr-8T-2re" secondAttribute="bottom" constant="8" symbolic="YES" id="NQ5-L5-Gb4"/>
                                 <constraint firstAttribute="trailing" secondItem="3yr-8T-2re" secondAttribute="trailing" id="QNM-qS-fwg"/>
                                 <constraint firstItem="ns0-hK-QLw" firstAttribute="centerY" secondItem="3yr-8T-2re" secondAttribute="centerY" id="TOG-Bc-iXR"/>
                                 <constraint firstItem="ns0-hK-QLw" firstAttribute="centerX" secondItem="3yr-8T-2re" secondAttribute="centerX" id="TaL-Ds-Fjg"/>
                                 <constraint firstItem="uhP-HN-CVJ" firstAttribute="leading" secondItem="83m-gQ-5Ye" secondAttribute="leading" id="TbK-z9-iVF"/>
                                 <constraint firstItem="3yr-8T-2re" firstAttribute="leading" secondItem="83m-gQ-5Ye" secondAttribute="leading" id="YuR-BV-qJ2"/>
-                                <constraint firstItem="IaG-xV-dAI" firstAttribute="top" secondItem="3yr-8T-2re" secondAttribute="bottom" constant="8" symbolic="YES" id="asC-Al-7mI"/>
+                                <constraint firstItem="uhP-HN-CVJ" firstAttribute="top" secondItem="E9q-i5-Lrc" secondAttribute="bottom" constant="27" id="Z3f-ZP-VKF"/>
                                 <constraint firstAttribute="bottom" secondItem="uhP-HN-CVJ" secondAttribute="bottom" id="fwh-d6-7wH"/>
-                                <constraint firstAttribute="trailing" secondItem="IaG-xV-dAI" secondAttribute="trailing" constant="8" id="iIo-w3-iJx"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -153,17 +173,18 @@
                 <constraint firstItem="TYO-Fe-Lbr" firstAttribute="top" secondItem="SzV-Ld-kuw" secondAttribute="top" id="zlU-Zq-QkK"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="147.82608695652175" y="43.861607142857139"/>
+            <point key="canvasLocation" x="147.69230769230768" y="43.720379146919427"/>
         </view>
     </objects>
     <resources>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
+        <image name="paperplane" catalog="system" width="128" height="119"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
